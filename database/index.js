@@ -8,6 +8,15 @@ const books = [
     numOfPage: 225,
     category: ["fiction", "programming", "tech", "web dev"],
   },
+  {
+    ISBN: "26BEST",
+    title: "This is the second book",
+    authors: [1, 2],
+    language: "en",
+    pubDate: "2021-07-07",
+    numOfPage: 225,
+    category: ["fiction", "programming", "tech", "web dev"],
+  },
 ];
 
 const authors = [

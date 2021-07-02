@@ -11,7 +11,7 @@ const books = [
   {
     ISBN: "26BEST",
     title: "This is the second book",
-    authors: [1, 2],
+    authors: [2],
     language: "en",
     pubDate: "2021-07-07",
     numOfPage: 225,
@@ -28,7 +28,7 @@ const authors = [
   {
     id: 2,
     name: "Esheita",
-    books: ["123ONE"],
+    books: ["123ONE", "26BEST"],
   },
 ];
 const publications= [

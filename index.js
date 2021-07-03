@@ -388,7 +388,7 @@ shapeAI.put("/pub/book/update/:isbn", (req, res) => {
   //update publication
 
   database.publications.forEach((publication) => {
-    if (publication.id === (req.body.pubId)) {
+    if (publication.id === req.body.pubId){
       return publication.books.push(req.params.isbn);
     }
   });

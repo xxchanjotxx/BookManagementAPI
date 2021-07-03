@@ -263,7 +263,7 @@ shapeAI.post("/author/new", (req, res) => {
 
 shapeAI.post("/pub/new", (req, res) => {
   const { newPub } = req.body;
-  database.authors.push(newPub);
+  database.publications.push(newPub);
   return res.json({
     books: database.publications,
     message: "Publication was added",
@@ -304,28 +304,103 @@ shapeAI.put("/book/update/:isbn", (req, res) => {
 
 shapeAI.put("/book/author/update/:isbn", (req, res) => {
   // when add new author to book, update author object
-
   //UPDATING BOOK DATABASE
   //searching for the book
   database.books.forEach((book) => {
     if (book.ISBN === req.params.isbn)
       // pushing the author id into the author array in books
-      return book.author.push(req.body.newAuthor);
+      return book.authors.push(req.body.newAuthor);
   });
 
   //UPDATING AUTHOR DATABASE
   //searching for the book
   database.authors.forEach((author) => {
     //checking author id from body
-    if (author.ID === req.body.newAuthor)
+    if (author.id === req.body.newAuthor) {
       // pushing the isbn of book in author array
-      return database.authors.books.push(req.params.isbn);
+      return author.books.push(req.params.isbn);
+    }
   });
+
   return res.json({
     books: database.books,
     authors: database.authors,
     message: "New author was added",
   });
+});
+
+/*
+ Route              /author/update
+ Description        update author details
+ Access             public 
+ Parameters         id
+ Method             PUT
+*/
+
+shapeAI.put("/author/update/:id", (req, res) => {
+  database.authors.forEach((author) => {
+    console.log("HI");
+    if (author.id === JSON.parse(req.params.id)) {
+      console.log("hello");
+      console.log(author.id);
+      author.name = req.body.newAuthorName;
+      return;
+    }
+  });
+
+  return res.json({
+    authors: database.authors,
+    message: "Author name was changed",
+  });
+});
+
+/*
+ Route              /pub/update
+ Description        update publication details
+ Access             public 
+ Parameters         id
+ Method             PUT
+*/
+
+shapeAI.put("/pub/update/:id", (req, res) => {
+  database.publications.forEach((pub) => {
+    if (pub.id === JSON.parse(req.params.id)) {
+      pub.name = req.body.newPubName;
+      return;
+    }
+  });
+
+  return res.json({
+    publications: database.publications,
+    message: "Publication name was changed",
+  });
+});
+
+/*
+ Route              /pub/book/update
+ Description        update/add publication
+ Access             public 
+ Parameters         isbn
+ Method             PUT
+*/
+
+shapeAI.put("/pub/book/update/:isbn", (req, res) => {
+  //update publication
+
+  database.publications.forEach((publication) => {
+    if (publication.id === (req.body.pubId)) {
+      return publication.books.push(req.params.isbn);
+    }
+  });
+
+  //update book
+  database.books.forEach((book) => {
+    if (book.ISBN === req.params.isbn) {
+      return book.publication=req.body.pubId;
+    }
+  });
+
+  res.json({books: database.books, publications: database.publications, message: "The publication is updated"})
 });
 
 shapeAI.listen(3000, () => console.log("Server is Running 🚀"));

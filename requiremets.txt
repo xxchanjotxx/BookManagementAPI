@@ -26,7 +26,7 @@ POST FUNCTION
 
 PUT FUNCTION
 -->Update book details(title) ✅
--->Update or add new author ❌ 
+-->Update or add new author ✅
 
 DELETE FUNCTION
 -->Delete a Book
@@ -43,10 +43,10 @@ AUTHOR
 -->GET LIST OF AUTHOR BASED ON A BOOK✅
 
 POST FUNCTION
---> Post new author✅
+--> Post new author ✅
 
 PUT FUNCTION
--->author details
+-->author details ✅
 
 DELETE FUNCTION
 -->Delete a wholeauthor
@@ -65,8 +65,8 @@ POST FUNCTION
 -->post new publication✅
 
 PUT FUNCTION
--->update publication details
--->update/add new book to a publication
+-->update publication details ✅
+-->update/add new book to a publication✅
 
 DELETE FUNCTION
 -->Delete a book from publication

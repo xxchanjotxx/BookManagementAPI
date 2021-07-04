@@ -1,10 +1,24 @@
+//to hide our sensitive details
+require("dotenv").config();
+
 //Frame Work
 const express = require("express");
-
+//mongoose for mongoDB
+const mongoose = require("mongoose");
 //import data from database
 const database = require("./database/index");
 //initialising
 const shapeAI = express();
+
+//establish data connection
+mongoose
+  .connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
+  })
+  .then(() => console.log("Connection Established😎"));
 
 //configurations
 
@@ -534,7 +548,11 @@ shapeAI.delete("/pub/book/delete/:isbn/:pubId", (req, res) => {
       return;
     }
   });
-  return res.json({Publications: database.publications, Books: database.books, message:`The publication with id: ${req.params.id} is deleted`})
+  return res.json({
+    Publications: database.publications,
+    Books: database.books,
+    message: `The publication with id: ${req.params.pubId} is deleted`,
+  });
 });
 
 shapeAI.listen(3000, () => console.log("Server is Running 🚀"));

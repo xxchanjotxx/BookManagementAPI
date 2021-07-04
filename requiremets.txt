@@ -19,7 +19,7 @@ BOOKS:
 -->GET ALL BOOKS ✅
 -->GET SPECIFIC BOOKS✅
 -->GET BOOKS BY AUTHOR ID✅ ----DOUBT THO
--->GET BOOKS BY GENRE✅
+-->GET BOOKS BY GENRE ✅
 
 POST FUNCTION
 --> Post a new book✅
@@ -29,8 +29,8 @@ PUT FUNCTION
 -->Update or add new author ✅
 
 DELETE FUNCTION
--->Delete a Book
--->Delete an author from a book
+-->Delete a Book ✅
+-->Delete an author from a book ✅
 
 
 ------------------------------------------------------------------------------------------------
@@ -49,7 +49,7 @@ PUT FUNCTION
 -->author details ✅
 
 DELETE FUNCTION
--->Delete a wholeauthor
+-->Delete a whole author ✅
 
 
 ------------------------------------------------------------------------------------------------
@@ -69,8 +69,8 @@ PUT FUNCTION
 -->update/add new book to a publication✅   
 
 DELETE FUNCTION
--->Delete a book from publication
--->Delete a publication
+-->Delete a book from publication ✅  
+-->Delete a publication ✅
 
 
 

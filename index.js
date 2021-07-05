@@ -5,8 +5,15 @@ require("dotenv").config();
 const express = require("express");
 //mongoose for mongoDB
 const mongoose = require("mongoose");
+
 //import data from database
 const database = require("./database/index");
+
+//models
+const BookModels = require("./database/book");
+const AuthorModels = require("./database/author");
+const PublicationModels = require("./database/publication");
+
 //initialising
 const shapeAI = express();
 

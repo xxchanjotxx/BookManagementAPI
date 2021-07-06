@@ -10,9 +10,15 @@ const publicationModel = require("../../database/publication");
 const Router = require("express").Router();
 
 //------------------GET FUNCTION--------------
+
+//exception handling
 Router.get("/", async (req, res) => {
-  const getAllAuthors = await authorModel.find();
-  return res.json({ authors: getAllAuthors });
+  try {
+    const getAllAuthors = await authorModel.find();
+    return res.json({ authors: getAllAuthors });
+  } catch (error) {
+    return res.json({ error: error.message });
+  }
 });
 
 /*

@@ -2,7 +2,12 @@ const mongoose = require("mongoose");
 
 // creating schema
 const BookSchema = mongoose.Schema({
-  ISBN: String,
+  ISBN: {
+    type: String,
+    required: true,
+    minLength: 6,
+    maxLength: 10,
+  }, //validating with mongoose: so that it cannot be entered empty
   title: String,
   authors: [Number],
   language: String,
@@ -14,6 +19,6 @@ const BookSchema = mongoose.Schema({
 
 //create a book model
 
-const bookModel = mongoose.model("books",BookSchema);
+const bookModel = mongoose.model("books", BookSchema);
 
-module.exports = bookModel; 
+module.exports = bookModel;

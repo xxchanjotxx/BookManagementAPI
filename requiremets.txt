@@ -16,16 +16,16 @@ REQUIREMENTS:--
 
 BOOKS:
 ->NEED AN API TO:
--->GET ALL BOOKS ✅
--->GET SPECIFIC BOOKS✅
--->GET BOOKS BY AUTHOR ID✅ ----DOUBT THO
--->GET BOOKS BY GENRE ✅
+-->GET ALL BOOKS ✅ 💪
+-->GET SPECIFIC BOOKS✅ 💪
+-->GET BOOKS BY AUTHOR ID✅ 💪
+-->GET BOOKS BY GENRE ✅ 💪
 
 POST FUNCTION
---> Post a new book✅
+--> Post a new book✅ 💪
 
 PUT FUNCTION
--->Update book details(title) ✅
+-->Update book details(title) ✅ 💪
 -->Update or add new author ✅
 
 DELETE FUNCTION
@@ -38,12 +38,12 @@ DELETE FUNCTION
 
 AUTHOR
 ->WE NEED AN API TO:
--->GET ALL AUTHORS✅
--->GET SPECIFIC AUTHOR✅
--->GET LIST OF AUTHOR BASED ON A BOOK✅
+-->GET ALL AUTHORS✅  💪
+-->GET SPECIFIC AUTHOR✅ 💪
+-->GET LIST OF AUTHOR BASED ON A BOOK✅ 💪
 
 POST FUNCTION
---> Post new author ✅
+--> Post new author ✅ 💪
 
 PUT FUNCTION
 -->author details ✅
@@ -57,12 +57,12 @@ DELETE FUNCTION
 
 PUBLICATION
 ->WE NEED AN API TO:
--->GET ALL PUBLICATION✅
--->GET A SPECIFIC PUBLICATION✅
--->GET PUBLICATION BASED ON A BOOK ✅
+-->GET ALL PUBLICATION✅ 💪
+-->GET A SPECIFIC PUBLICATION✅ 💪 
+-->GET PUBLICATION BASED ON A BOOK ✅ 💪
  
 POST FUNCTION
--->post new publication✅
+-->post new publication✅ 💪
 
 PUT FUNCTION
 -->update publication details ✅

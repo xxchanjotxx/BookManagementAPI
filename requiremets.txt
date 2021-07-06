@@ -26,11 +26,11 @@ POST FUNCTION
 
 PUT FUNCTION
 -->Update book details(title) ✅ 💪
--->Update or add new author ✅
+-->Update or add new author ✅ 💪
 
 DELETE FUNCTION
--->Delete a Book ✅
--->Delete an author from a book ✅
+-->Delete a Book ✅ 💪
+-->Delete an author from a book ✅ 💪
 
 
 ------------------------------------------------------------------------------------------------
